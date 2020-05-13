@@ -21,7 +21,7 @@ count = 0
 while success:
     speed = labels[count]
     #cv2.imwrite("jpg_extraction/frame%d.jpg" % count, image)     # save frame as JPEG file    
-    cv2.imwrite(f'vidCaps/{speed}_frame-{count}.jpg', image)
+    cv2.imwrite(f'vidCaps/{speed}_{count}.jpg', image)
     success,image = vidcap.read()
     print(f'Read {count}th new frame: ', success)
     count += 1
