@@ -1,4 +1,6 @@
 /data
-/vidCaps
 /dataset
 /multiset
+/training_data
+/validation_data
+/vidCaps
