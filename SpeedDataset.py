@@ -27,17 +27,18 @@ class SpeedDataset(Dataset):
         return len(self.items)
 
     def __getitem__(self, idx):
-        img_name = os.path.join(self.root_dir, self.items[idx])
+        img_name = self.items[idx]
+        full_img_name = os.path.join(self.root_dir, img_name)
 
-        nparr = io.imread(img_name)
+        nparr = io.imread(full_img_name)
         nparr = cv2.resize(nparr, (480, 480))
         # Convert image to torch tensor
         image = torch.from_numpy(nparr)
 
-        regex = re.split("/|_", img_name)
+        regex = re.split("/|_", full_img_name)
         label = float(regex[1])
 
-        sample = {"image": image, "label": label}
+        sample = {"fname": img_name, "image": image, "label": label}
 
         if self.transform:
             sample = self.transform(sample)
@@ -60,3 +61,5 @@ class SpeedDataset(Dataset):
 # print(type(image))
 # label = data[0]["label"]
 # print(type(label))
+
+# print(data[0]["fname"])
