@@ -2,6 +2,7 @@ from __future__ import print_function, division
 import os
 import re
 
+import cv2
 import torch
 import pandas as pd
 from skimage import io, transform
@@ -29,11 +30,13 @@ class SpeedDataset(Dataset):
         img_name = os.path.join(self.root_dir, self.items[idx])
 
         nparr = io.imread(img_name)
+        nparr = cv2.resize(nparr, (480, 480))
         # Convert image to torch tensor
         image = torch.from_numpy(nparr)
 
         regex = re.split("/|_", img_name)
         label = float(regex[1])
+
         sample = {"image": image, "label": label}
 
         if self.transform:
@@ -41,16 +44,19 @@ class SpeedDataset(Dataset):
 
         return sample
 
-    def showItem(self, idx):
-        image, label = (self[idx]['image'], self[idx]['label'])
-        print(label)
+    def show_item(self, idx):
+        image, label = (self[idx]["image"], self[idx]["label"])
+        plt.title(f"{round(label, 2)}  MPH")
+
         plt.imshow(image)
 
+    def show_batch(self):
+        pass
 
-"""
-data = SpeedDataset(root_dir='vidCaps/')
 
-sample = data[0]
-print(sample['label'], 'MPH')
-plt.imshow(sample['image'])
-"""
+# data = SpeedDataset(root_dir="vidCaps/")
+
+# image = data[0]["image"]
+# print(type(image))
+# label = data[0]["label"]
+# print(type(label))

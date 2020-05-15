@@ -6,8 +6,6 @@ import numpy as numpy
 cap = cv2.VideoCapture("data/train.mp4")
 file = "data/train.txt"
 
-j
-
 
 def getSpeedList(file):
     with open(file) as f:
@@ -64,6 +62,21 @@ def playVid(vid, label_file):
     cv2.destroyAllWindows()
 
     playVid(cap, labels)
+
+
+def get(item):
+    try:
+        print(len(item))
+    except:
+        print("cant get len of item")
+    try:
+        print(item.shape)
+    except:
+        print("cant get shape of item")
+    try:
+        print(type(item))
+    except:
+        print("cant get type of item")
 
 
 if __name__ == "__main__":
