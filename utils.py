@@ -14,7 +14,7 @@ def getSpeedList(file):
     return lines
 
 
-def drawSpeed(frame, speed, counter, show_counter, show_percentage):
+def draw_speed(frame, speed, counter, show_counter, show_percentage):
     font = cv2.FONT_HERSHEY_SIMPLEX
 
     if show_counter:
@@ -53,8 +53,11 @@ def playVid(vid, label_file):
 
         ret, frame = cap.read()
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-        drawSpeed(gray, speed, counter, True, True)
+        
+        try:
+            draw_speed(gray, speed, counter, True, True)
+        except:
+            cv2.imshow(gray)
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 

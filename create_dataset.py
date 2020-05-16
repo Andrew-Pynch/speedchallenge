@@ -3,7 +3,7 @@ import os
 import cv2
 import numpy as np
 
-vidcap = cv2.VideoCapture("data/train.mp4")
+vidcap = cv2.VideoCapture("data/test.mp4")
 labels_file = "data/train.txt"
 training_data = []
 

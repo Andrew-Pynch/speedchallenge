@@ -4,3 +4,6 @@
 /training_data
 /validation_data
 /vidCaps
+*.jpg
+*.png
+*.pkl
