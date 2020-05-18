@@ -2,6 +2,7 @@
 Needs a lot of work but it is something!! :D
 
 ![Alt Text](https://media.giphy.com/media/cJRxe5EEzl6KT8bjbH/giphy.gif)
+![Alt Text](https://media.giphy.com/media/cJRxe5EEzl6KT8bjbH/giphy.gif)
 
 # TODO
 
