@@ -1,7 +1,7 @@
 # First Experimental Model! 
 Needs a lot of work but it is something!! :D
 
-![Model Output](models/demo.gif)
+![image](https://github.com/Andrew-Pynch/speedchallenge/blob/master/models/demo.gif?raw=true)
 
 # TODO
 
