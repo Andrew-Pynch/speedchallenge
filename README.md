@@ -1,7 +1,7 @@
 # First Experimental Model! 
 Needs a lot of work but it is something!! :D
 
-![Alt Text](https://media2.giphy.com/media/cJRxe5EEzl6KT8bjbH/giphy.gif)
+![Alt Text](https://giphy.com/gifs/cJRxe5EEzl6KT8bjbH/html5)
 
 # TODO
 
