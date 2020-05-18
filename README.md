@@ -1,4 +1,6 @@
-
+# First Experimental Model! 
+Needs a lot of work but it is something!! :D
+![](https://media.giphy.com/media/cJRxe5EEzl6KT8bjbH/giphy.gif)
 
 # TODO
 
