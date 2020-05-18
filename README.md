@@ -1,24 +1,16 @@
-Welcome to the comma.ai Programming Challenge!
-======
 
-Your goal is to predict the speed of a car from a video.
 
-- data/train.mp4 is a video of driving containing 20400 frames. Video is shot at 20 fps.
-- data/train.txt contains the speed of the car at each frame, one speed on each line.
-- data/test.mp4 is a different driving video containing 10798 frames. Video is shot at 20 fps.
+# TODO
 
-Deliverable
------
+<!-- prettier-ignore -->
+| STATUS | FEATURE   | DESCRIPTION  |
+|---|-----------|--------------|
+| 🎉 | Resnet 151 Model | Basically train a model to directly map from single frame samples to speed predictions. Unfortunately This did not work very well. |
+| ❗ | Label Pipeline | Image Transforms Pipeline: mp4 --> images |
+| ❗ | Cleanup utils | Utils has a bunch of useful functions for this project, needs some cleanup |
+| ❗ | . | . |
+| ❗ | . | . |
 
-Your deliverable is test.txt. E-mail it to givemeajob@comma.ai, or if you think you did particularly well, e-mail it to George.
+## Initial Experiment Results
 
-Evaluation
------
-
-We will evaluate your test.txt using mean squared error. <10 is good. <5 is better. <3 is heart.
-
-Twitter
-------
-
-<a href="https://twitter.com/comma_ai">Follow us!</a>
-
+First model was basically a super nieve attempt to map directly from single frames to speed predictions. Used a Resnet151 pretrained on imagene to directly try and predict the speed of a given frame. Model appeared to do well in training / validation but WAY overfit in the testing process. It basically constantly output the average speed of the traing. Since it is probably not possible (or at the very least easy) to predict the speed of a car from a single frame from a video, I going to explore options that make use of the temporal data. 4d convolutions? :thinking:
