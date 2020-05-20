@@ -16,4 +16,6 @@ Needs a lot of work but it is something!! :D
 
 ## Initial Experiment Results
 
-First model was basically a super nieve attempt to map directly from single frames to speed predictions. Used a Resnet151 pretrained on imagene to directly try and predict the speed of a given frame. Model appeared to do well in training / validation but WAY overfit in the testing process. It basically constantly output the average speed of the traing. Since it is probably not possible (or at the very least easy) to predict the speed of a car from a single frame from a video, I going to explore options that make use of the temporal data. 3d convolutions? :thinking:
+First model was basically a super nieve attempt to map directly from single frames to speed predictions. Used a Resnet151 pretrained on imagene to directly try and predict the speed of a given frame. Model appeared to do well in training / validation but WAY overfit in the testing process. It basically constantly outputting the average speed of the training set (which is expected but unfortunate :/). Since it is probably not possible (or at the very least easy) to predict the speed of a car from a single frame from a video, I going to explore options that make use of the temporal data. 3d convolutions? :thinking:
+
+I am also going to try and fit this data using an LSTM.
